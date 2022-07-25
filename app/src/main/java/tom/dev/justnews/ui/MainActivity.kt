@@ -1,8 +1,8 @@
-package tom.dev.justnews
+package tom.dev.justnews.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import tom.dev.justnews.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
