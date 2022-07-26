@@ -21,7 +21,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "NEWS_API_KEY", properties["api.key"]
+        buildConfigField "String", "NEWS_API_KEY", properties["news.api.key"]
+        buildConfigField "String", "NEWS_API_BASE", properties["news.api.base"]
     }
 
     buildTypes {
@@ -44,11 +45,19 @@ android {
 
 dependencies {
     // hilt
-    implementation("com.google.dagger:hilt-android:2.40.1")
-    kapt("com.google.dagger:hilt-compiler:2.40.1")
+    implementation("com.google.dagger:hilt-android:2.42")
+    kapt("com.google.dagger:hilt-compiler:2.42")
 
-    // retrofit
+    // network
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.9")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.9")
+
+    // moshi
+    implementation "com.squareup.moshi:moshi:1.11.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.11.0"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.11.0"
 
     // androidx
     implementation 'androidx.core:core-ktx:1.8.0'

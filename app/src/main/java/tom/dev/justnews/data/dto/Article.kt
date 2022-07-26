@@ -1,7 +1,7 @@
 package tom.dev.justnews.data.dto
 
-data class HeadlineArticle(
-    val source: NewsSource? = NewsSource(),
+data class Article(
+    val source: ArticleSource? = ArticleSource(),
     val author: String? = "Invalid Author",
     val title: String? = "Invalid Title",
     val description: String? = "Invalid Description",
