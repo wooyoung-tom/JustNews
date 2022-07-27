@@ -13,8 +13,8 @@ interface NewsApi {
         @Query("country") country: Country = Country.KR,
         @Query("category") category: Category = Category.GENERAL,
         @Query("q") keyword: String? = null,
-        @Query("pageSize") pageSize: Int,
-        @Query("page") page: Int
+        @Query("pageSize") pageSize: Int = 1,
+        @Query("page") page: Int = 1
     ): NewsResponse
 
     @GET("/v2/top-headlines/sources")

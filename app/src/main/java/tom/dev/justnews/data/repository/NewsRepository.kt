@@ -1,5 +1,7 @@
 package tom.dev.justnews.data.repository
 
-interface NewsRepository {
+import tom.dev.justnews.data.dto.NewsResponse
 
+interface NewsRepository {
+    suspend fun getTopHeadlineArticles(): NewsResponse
 }
