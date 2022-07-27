@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
+import tom.dev.justnews.data.repository.NewsRepository
 import tom.dev.justnews.domain.GetTopHeadlineArticlesUseCase
 import javax.inject.Singleton
 
@@ -16,7 +17,9 @@ object UseCasesModule {
 
     @Provides
     @Singleton
-    fun provideGetTopHeadlineArticlesUseCase(): GetTopHeadlineArticlesUseCase {
-
+    fun provideGetTopHeadlineArticlesUseCase(
+        newsRepository: NewsRepository
+    ): GetTopHeadlineArticlesUseCase {
+        return GetTopHeadlineArticlesUseCase(newsRepository)
     }
 }

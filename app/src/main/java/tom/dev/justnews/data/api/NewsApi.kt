@@ -10,15 +10,15 @@ interface NewsApi {
 
     @GET("/v2/top-headlines")
     suspend fun getTopHeadlineArticles(
-        @Query("country") country: Country,
-        @Query("category") category: Category,
-        @Query("q") keyword: String?,
+        @Query("country") country: Country = Country.KR,
+        @Query("category") category: Category = Category.GENERAL,
+        @Query("q") keyword: String? = null,
         @Query("pageSize") pageSize: Int,
         @Query("page") page: Int
     ): NewsResponse
 
     @GET("/v2/top-headlines/sources")
-    fun getTopHeadlineArticlesFilterBySources(
+    suspend fun getTopHeadlineArticlesFilterBySources(
         @Query("sources") sources: String?,
         @Query("q") keyword: String?,
         @Query("pageSize") pageSize: Int,
