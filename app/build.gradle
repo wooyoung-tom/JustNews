@@ -10,12 +10,12 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 
 android {
     namespace 'tom.dev.justnews'
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         applicationId "tom.dev.justnews"
         minSdk 24
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 

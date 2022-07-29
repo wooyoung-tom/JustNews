@@ -1,12 +1,13 @@
-package tom.dev.justnews.ui
+package tom.dev.justnews.ui.home
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel
+class HomeViewModel
 @Inject
 constructor(
+
 ) : ViewModel() {
 }
