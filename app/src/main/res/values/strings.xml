@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">JustNews</string>
+
+    <string name="title_history">History</string>
+
+    <string name="home_fab_content_description">Extendable FAB</string>
 </resources>
